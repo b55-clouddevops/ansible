@@ -55,6 +55,15 @@ YAML is just  markup languaga ; Markup language is nothing a presentation langua
 
 ```
 
+# What is a fact ?
+In ansible, fact is the property of the node mentioned in the inventory file. By default, ansible is going to gather all the facts of the amchines mentioned in the inventory file
+
+```
+    $ ansible -i inv all -e ansible_user=centos -e ansible_password=abc@123 -m setup
+```
+
+
+
 # V.IMP Points
 
 ### NOTE :  If you would just like to print a variable, then enclose the variable in "{{varName}}" and there is no single quote concept 4
