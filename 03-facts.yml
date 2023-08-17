@@ -3,4 +3,8 @@
   tasks: 
     - name: Printing the default variable 
       ansible.builtin.debug:
-        msg: Server Flavor is {{ansible_distribution}}
+        msg: Server Flavor Is {{ansible_distribution}}
+
+    - name: Printing the mac address
+      ansible.builtin.debug:
+        msg: Mac Address Of The Node Is {{ansible_default_ipv4.macaddress}}
