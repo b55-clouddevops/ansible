@@ -13,10 +13,12 @@
       vars: 
         URL: task.google.com
 
-    - name: Demo on using undelated variable 
-      ansible.builtin.debug:
-        msg: Value of CLIURL is {{CLIURL}}
+    # - name: Demo on using undelated variable 
+    #   ansible.builtin.debug:
+    #     msg: Value of CLIURL is {{CLIURL}}
 
+
+# PS : If you try to print a variable that is not declared, it will throw an error.
 
 # Variable Precedence : 
 
