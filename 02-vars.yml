@@ -4,7 +4,8 @@
     URL: play.google.com    
   vars_prompt:
     - name: URNAME
-      prompt: Enter your name                 
+      prompt: Enter your name 
+      private: false                
   tasks: 
     - name: Printing the variable 
       ansible.builtin.debug:
