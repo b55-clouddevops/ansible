@@ -13,3 +13,12 @@
       vars: 
         URL: task.google.com
 
+    - name: Demo on using undelated variable 
+      ansible.builtin.debug:
+        msg: Value of CLIURL is {{CLIURL}}
+
+
+# Variable Precedence : 
+
+### Local Variable > Global Variable 
+
