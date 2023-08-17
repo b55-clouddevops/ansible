@@ -1,7 +1,10 @@
 - name: Demo on vars usage  
   hosts: all    
   vars:                                   # Global Variables : All the tasks of this play can access this variable 
-    URL: play.google.com                    
+    URL: play.google.com    
+  vars_prompt:
+    - name: URNAME
+      prompt: Enter your name                 
   tasks: 
     - name: Printing the variable 
       ansible.builtin.debug:
@@ -13,14 +16,18 @@
       vars: 
         URL: task.google.com
 
-    # - name: Demo on using undelated variable 
-    #   ansible.builtin.debug:
-    #     msg: Value of CLIURL is {{CLIURL}}
+    - name: Demo on using undelated variable 
+      ansible.builtin.debug:
+        msg: Value of CLIURL is {{CLIURL}}
+
+    - name: Printing prompt variable  
+      ansible.builtin.debug:
+        msg: Name of the person is {{URNAME}}
 
 
 # PS : If you try to print a variable that is not declared, it will throw an error.
 
 # Variable Precedence : 
 
-### Local Variable > Global Variable 
+### CLI Variables > Local Variable > Global Variable 
 
