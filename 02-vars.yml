@@ -16,9 +16,9 @@
       vars: 
         URL: task.google.com
 
-    - name: Demo on using undelated variable 
-      ansible.builtin.debug:
-        msg: Value of CLIURL is {{CLIURL}}
+    # - name: Demo on using undelated variable 
+    #   ansible.builtin.debug:
+    #     msg: Value of CLIURL is {{CLIURL}}
 
     - name: Printing prompt variable  
       ansible.builtin.debug:
