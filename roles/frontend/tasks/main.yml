@@ -12,7 +12,7 @@
 - name: Performing Cleanup
   ansible.builtin.file:
     path: /usr/share/nginx/html
-    state:    
+    state: absent   
 
 - name: Copying the frontend
   ansible.builtin.copy:
