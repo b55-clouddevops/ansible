@@ -1,5 +1,4 @@
 # If any of the task fails in Playbook, the sub-sequent tasks will be failed and playbook will be exited.
-
 - name: Demo on errors
   hosts: all       
   tasks: 
