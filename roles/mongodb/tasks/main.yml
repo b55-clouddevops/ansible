@@ -10,6 +10,6 @@
 
 - name: Starting {{COMPONENT}} 
   systemd:
-    name: nginx
-    state: mongod 
+    name: mongod
+    state: restarted
     enabled: yes
