@@ -20,7 +20,7 @@ Always go with latest version, which can be installed from tools/ansible/install
 
 ANSIBLE has lot of pre-defined variables and we need to use them to supply userName and password it has to use to authenticate to the nodes.
 ```
-
+ans
 ### ansible_user     : Predefined variable for userName 
 ### ansible_password : Predefined variable for password  
 ```
