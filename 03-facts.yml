@@ -8,4 +8,4 @@
 
     - name: Printing the mac address
       ansible.builtin.debug:
-        msg: Mac Address Of The Node Is {{ansible_default_ipv4.macaddress}}
+        msg: Mac Address Of The Node Is {{ansible_default_ipv4.macaddress}} 
