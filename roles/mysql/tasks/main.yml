@@ -20,9 +20,13 @@
   register: pwd_log
 
 
-# - name: Extracting the root password
-#   ansible.builtin.set_fact:
-#     DEFAULT_PASSWORD: something
+- name: Extracting the root password
+  ansible.builtin.set_fact:
+    DEFAULT_PASSWORD: "{{ pwd_log['content'] | b64decode | regex_findall('.*temporary password.*') }}"
+
+- name: Printing 
+  ansible.builtin.debug:
+     msg: value is {{DEFAULT_PASSWORD}}
 
 # - name: Download and extracting {{COMPONENT}}
 #   ansible.builtin.unarchive:
