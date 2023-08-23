@@ -55,7 +55,7 @@
     name: all 
     login_user: root
     login_password: "{{ROOT_PASSWORD}}"
-    target: /tmp/myql-main/shipping.sql  
+    target: /tmp/mysql-main/shipping.sql  
   
 - name: Configuring Name
   ansible.builtin.include_role:
