@@ -17,7 +17,7 @@
 
 - name: Creating {{APPUSER}} user
   community.rabbitmq.rabbitmq_user:
-    user: "{{APPUSER}}"
+    user: roboshop
     password: roboshop123
     permissions:
       - vhost: /
