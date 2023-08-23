@@ -7,3 +7,15 @@
 - name: Printing the variable 
   ansible.builtin.debug:
     msg: Value of the OUT is {{OUT}}
+
+- name: Updating the UID of {{COMPONENT}}.ini file
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^uid'
+    line: uid = {{OUT.uid}} 
+
+- name: Updating the GID of {{COMPONENT}}.ini file
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^gid'
+    line: uid = {{OUT.group}}
