@@ -15,7 +15,7 @@
     state: started
     enabled: yes 
 
-- name: Creating {{APPUSER}} user on {{COMPONENT}}
+- name: Creating {{APPUSER}} user
   community.rabbitmq.rabbitmq_user:
     user: "{{APPUSER}}"
     password: roboshop123
