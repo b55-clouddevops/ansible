@@ -14,7 +14,6 @@
     state: restarted
     enabled: yes
 
-
 # Block and rescue works together : If any of the task in the block fails, then RESCUE tasks will be executed.
 - name: Verifying the password
   block:
@@ -35,7 +34,7 @@
           DEFAULT_PASSWORD: "{{ pwd_log['content'] | b64decode | regex_findall('.*temporary password.*')| join(' ') | split(' ') | last }}"
 
     - name: Resetting Default root password of {{COMPONENT}} 
-      ansible.builtin.shell: echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ROOT_PASSWORD}}'" | mysql  --connect-expired-password -uroot -p{{DEFAULT_PASSWORD}}
+      ansible.builtin.shell: echo "ALTER USER 'root'@'localhost' IDENTIFIED BY {{ROOT_PASSWORD}}';" | mysql  --connect-expired-password -uroot -p{{DEFAULT_PASSWORD}}
 
     - name: Removing {{COMPONENT}} password validate plugin 
       ansible.builtin.shell: echo "uninstall plugin validate_password" | mysql -uroot -pRoboShop@1 
