@@ -121,3 +121,12 @@ Points to be notes when using pull :
 ```
 In Ansible terms, a dependency is any role that needs to have run before the current role runs.
 ```
+
+
+### What is a handler and why do we need that ?
+
+```
+Ansible provides feature named handlers, which is like a task but will only run when called by a notifier in another task. 
+
+This feature is important because your requirements for running a task may depend on the state of a service, existence of a file or a follow up tasks when state changed.
+```
