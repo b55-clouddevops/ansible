@@ -1,7 +1,7 @@
 - name: Demo on vault  
   hosts: localhost 
   vars:
-    PASSWORD: !vault |
+    mysecret: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           32356463393531616232383234393163356535616665316161323461363834643762373362376137
           3130666633636361626531636131643233396431363364380a613236393161663135366465376136
@@ -11,4 +11,4 @@
   tasks: 
     - name: Printing database password
       ansible.builtin.debug:
-        msg: PASSWORD is {{ PASSWORD }} 
+        msg: PASSWORD is {{ mysecret }} 
