@@ -36,5 +36,5 @@
 
 - name: Just printing 
   ansible.builtin.debug:
-    msg: I am a variable 
+    msg: I am a variable {{DB}}
 
