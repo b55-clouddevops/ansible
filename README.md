@@ -99,15 +99,15 @@ roles/
 ```
 1) When you infrastructure is static, then we will host an ANSIBLE Server and will target configuration management on all the nodes from your ansible server. 
 
-2) When you infrastrucre is not static, which means on cloud we often scale out and down the infra , in this case manintaining the inventory is quite challenging and to avoind this, what we do is, as a part of the BOOTSTRAPPING, we will let the ansible-pull command to run.
+2) When you infrastrucre is not static, which means on cloud we often scale out and down the infra , in this case manintaining the inventory is quite challenging and to avoind this, what we do is, as a part of the BOOTSTRAPPING / INITIALIZATION , we will let the ansible-pull command to run.
 
 Points to be notes when using pull : 
     
     * Ensure your nodes running ansible has ansible installed.
     * Pull only works from GIT. 
 
-
 ```
+
 
 ### How to use ansible pull ?
 
@@ -130,3 +130,11 @@ Ansible provides feature named handlers, which is like a task but will only run 
 
 This feature is important because your requirements for running a task may depend on the state of a service, existence of a file or a follow up tasks when state changed.
 ```
+
+
+
+
+
+
+# Outstanding 
+1) Need to check ansible-vault
