@@ -13,6 +13,7 @@ pipeline {
     stages {
 
         stage('Lint Checks') {                     // This stage will only be executed when you run the job from a feature branch
+            when { branch pattern: "feature/.*", comparator: "REGEXP"}
             steps {
                 sh '''
                     env 
