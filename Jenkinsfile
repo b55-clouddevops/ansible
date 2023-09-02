@@ -1,9 +1,10 @@
 pipeline {
-    agent any 
+    agent any
     
     environment {                                  // Pipeline Variables : All the stages of the pipeline can use it.
         SSH_CRED = credentials('SSH_CRED')
     }
+
     // parameters {
     //     string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the component name') 
     //     choice(name: 'CHOICE', choices: ['dev', 'prod'], description: 'Chose the environment')
