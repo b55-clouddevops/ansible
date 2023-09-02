@@ -11,12 +11,21 @@ pipeline {
     // }
 
     stages {
-        stage('Performing a dry run') {
+
+        stage('Lint Checks') {                     // This stage should only run when you raise a PULL Request.
+            steps {
+                sh '''
+                    echo **** Starting Lint Checks ****
+                    echo **** Lint Checks Completed ****
+                '''
+            }
+        }
+
+        stage('Performing a dry run') {                     // This stage should only run when you raise a PULL Request.
             steps {
                 sh '''
                     env 
                     ansible-playbook robo-dryrun.yml  -e ENV=dev -e COMPONENT=redis -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW}  
-
                 '''
             }
         }
