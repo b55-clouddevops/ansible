@@ -131,10 +131,8 @@ Ansible provides feature named handlers, which is like a task but will only run 
 This feature is important because your requirements for running a task may depend on the state of a service, existence of a file or a follow up tasks when state changed.
 ```
 
-
-
-
-
-
-# Outstanding 
-1) Need to check ansible-vault
+### Grok Debugger : Helps in converting unstructured logs to structured :
+```
+grok    : https://grokdebugger.com/
+patterns: https://github.com/cjslack/grok-debugger/blob/master/public/patterns/grok-patterns
+```
